@@ -2,12 +2,14 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8">
+
     <title>Responsive Page</title>
 
     <!-- 任务1: 统一视口，默认页面缩放为1.0倍 -->
 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- 任务2: 使用normalize.css统一默认样式 -->
-
+    <link href="css/normalize.css" rel="stylesheet">
     <style>
         ul {
             margin: 0;
@@ -31,9 +33,17 @@
         }
 
         /* 任务3: 在浏览器宽度小于768px时，每行显示5个logo */
-
+        @media only screen and (max-width:768px){
+            ul li {
+                width: 20%;
+            }
+        }
         /* 任务4: 在浏览器宽度小于480px时，每行显示2个logo */
-
+        @media only screen and (max-width:480px){
+            ul li {
+                width: 50%;
+            }
+        }
     </style>
 </head>
 <body>
