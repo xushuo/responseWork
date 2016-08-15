@@ -13,7 +13,9 @@
         }
 
         /* 任务1、使用CSS hacks实现只有在Firefox浏览器下, 且Firefox版本>=2时, box背景为红色 */
-
+        body:last-child .box, x:-moz-any-link {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
