@@ -9,12 +9,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "echarts": "^3.2.2",
     "gulp": "^3.9.1",
     "gulp-csso": "^2.0.0",
     "gulp-filter": "^4.0.0",
     "gulp-rev": "^7.1.2",
     "gulp-rev-replace": "^0.4.3",
     "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.0"
+    "gulp-useref": "^3.1.0",
+    "zrender": "^3.1.2"
   }
 }

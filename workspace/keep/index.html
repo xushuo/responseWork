@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>坚持</title>
 </head>
 <body>
+<!--[if lt IE 8]>
+<p class="browserupdate">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
+<div id="main" style="width: 800px;height: 500px;"></div>
+<div id="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aperiam architecto commodi dolorem error eum facere illo labore neque nisi obcaecati, odio odit officia, possimus recusandae ullam vel velit!</div>
+<input type="button" value="Write!" onclick="writeFile('test.txt',$('#txt').text());"/>
+<script src="../js/vendor/jquery.min.js"></script>
+<script src="../js/vendor/echarts.min.js"></script>
+<script src="chart.js"></script>
+<script src="updateData.js"></script>
 </body>
 </html>
