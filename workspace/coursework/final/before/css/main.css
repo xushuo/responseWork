@@ -1,0 +1,203 @@
+/************
+ * 页面样式
+ ************/
+ /*============
+ 基本默认值
+ ==============*/
+html{
+    font-size:62.5%;
+    color:#222;
+    
+}
+::selection{
+    background-color:#b3d4cf;
+    text-shadow:none;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+}
+/**
+工具样式
+==================*/
+.center-block{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+.pull-right{
+    float:right !important;
+}
+.pull-left{
+    float:left !important;
+}
+.text-right{
+    text-align:right !important;
+}
+.text-left{
+    text-align:left !important;
+}
+.text-center{
+    text-align:center !important;
+}
+.hide{
+    display:none !important;
+}
+.show{  
+    display:block !important;
+}
+.invisible{
+    visibility:hidden;
+}
+.text-hide{
+    font: 0/0 a;
+    color:transparent;
+    text-shadow:none;
+    background-color:transparent;
+    border:0;
+}
+.clearfix:before,
+.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+/*=======================
+浏览器更新提示 
+=================*/
+.browserupdate{
+    margin:0;
+    padding:1rem;
+    background:#ccc;
+}
+/*=======================
+自定义页面样式
+==================*/
+body{
+    font-size:1.4rem;/*12px*/
+    line-height:1.5;
+    background-color:#f7f7f7;
+}
+
+a{
+    color:#666;
+    text-decoration:none;/*下划线*/
+}
+a:hover,a:active{
+    color:#0ae;
+    text-decoration:underline;
+}
+/*
+网站头部
+*/
+
+header{
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 3em 2em 2em;
+}
+header h1{
+    color: #47A2D9;
+    text-align: left;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+@media screen and (max-width: 55em) {
+    header h1{
+         text-align: center;
+    }
+    header{
+        padding: 0 2em 1em 2em;
+    }
+
+}
+
+/*
+网站主要内容
+*/
+.container{
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 3em 2em 2em;
+}
+
+.container .item{
+    display: flex;
+}
+.container .item .timeline{
+    display: inline-block;
+    text-align: right;
+    min-width: 10rem;
+}
+.container .item .timeline .data{
+    color: #BED0DB;
+    padding-right: 1rem;
+}
+.container .item .timeline .time{
+    padding-right: 1rem;
+    color: #6cbeed;
+    font-size: 4rem;
+}
+.container .item:nth-child(even) .timeline .time{
+    color: #3593ca;
+}
+.container .item .news{
+    border-left: #aedbf7 5px solid;
+    display: inline-block;
+    padding: 0 2rem 1rem;
+    color: #fdfdfe;
+}
+.container .item .news .content{
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+.container .item .news .content >h2{
+    font-size: 2.5rem;
+}
+.container .item:nth-child(odd) .news .content,
+.container .item:nth-child(odd) .news .content .point{
+    background-color: #6cbeed;
+}
+.container .item:nth-child(even) .news .content,
+.container .item:nth-child(even) .news .content .point{
+    background-color: #3593ca;
+}
+.container .item .news .content .point{
+    width: 1rem;
+    height: 1rem;
+    margin-left: -2.5rem;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+@media screen and (max-width: 55em){
+    .container{
+        padding: 0 2em 1em 2em;
+    }
+}
+@media screen and (max-width: 40em){
+    .container .item{
+        display: block;
+    }
+    .container .item .news{
+        border-left: none;
+        padding: 0;
+    }
+    .container .item .news .content{
+        margin-top: 1rem;
+    }
+    .container .item .news .content .point{
+        margin-left: 0;
+        margin-top: -1.5rem;
+    }
+    .container .item .timeline{
+        text-align: left;
+    }
+}
