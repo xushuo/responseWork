@@ -5,7 +5,6 @@ var mychart = echarts.init(document.getElementById("main"));
 var test;
 $.get('data.json',function(data){
     mychart.hideLoading();
-    test=data;
     var option = {
         title: {
             text: '体重变化'
@@ -19,9 +18,6 @@ $.get('data.json',function(data){
         toolbox: {
             show: true,
             feature: {
-                dataZoom: {
-                    yAxisIndex: 'none'
-                },
                 magicType: {type: ['line', 'bar']},
                 restore: {},
                 saveAsImage: {}
@@ -29,21 +25,24 @@ $.get('data.json',function(data){
         },
         xAxis:  {
             type: 'category',
+            name: '时间',
             boundaryGap: true,
             data: data.date
         },
-        yAxis: {
-            type: 'value',
-            scale: true,
-            axisLabel: {
-                formatter: '{value} KG'
-            }
-        },
+        yAxis: [{
+                type: 'value',
+                name: '体重',
+                scale: true,
+                axisLabel: {
+                    formatter: '{value} KG'
+                }
+            }],
         series: [
             {
                 name:'晚上体重',
                 type:'line',
                 data:data.PW,
+                yAxisIndex: 0,
                 markPoint: {
                     data: [
                         {type: 'max', name: '最大值'},
@@ -63,6 +62,7 @@ $.get('data.json',function(data){
                 name:'早上体重',
                 type:'line',
                 data:data.AW,
+                yAxisIndex: 0,
                 markPoint: {
                     data: [
                         {type: 'max', name: '最大值'},
@@ -80,7 +80,12 @@ $.get('data.json',function(data){
             }
         ]
     };
-
-
     mychart.setOption(option);
+    test=data;
+    var ra = test.AW.sort();
+    $("#now_a").text(ra[0]*2);
+    $("#ra").text(((67.15-ra[0])*2).toFixed(2))
+    var rp = test.PW.sort();
+    $("#now_p").text(rp[0]*2);
+    $("#rp").text(((67.15-rp[0])*2).toFixed(2))
 });

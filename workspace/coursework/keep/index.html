@@ -5,6 +5,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>坚持</title>
+    <style>
+        .analyze{
+            margin: 20px auto;
+            display: flex;
+            width: 40%;
+        }
+        section{
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -13,6 +23,20 @@
 <![endif]-->
 
 <div id="main" style="width: 100%;height: 700px;"></div>
+<div class="analyze">
+    <section>
+        <h3>早上</h3>
+        <p>原始体重：134.3</p>
+        <p>现在体重：<strong id="now_a"></strong></p>
+        <p>减重：<strong id="ra"></strong></p>
+    </section>
+    <section>
+        <h3>晚上</h3>
+        <p>原始体重：135.9</p>
+        <p>现在体重：<strong id="now_p"></strong></p>
+        <p>减重：<strong id="rp"></strong></p>
+    </section>
+</div>
 <script src="../../js/vendor/jquery.min.js"></script>
 <script src="../../js/vendor/echarts.min.js"></script>
 <script src="chart.js"></script>
